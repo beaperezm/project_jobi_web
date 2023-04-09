@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./class/class.scss";
+@import "./animations/animations.scss";
+@import "./colors/colors.scss";
+@import "./fonts/fonts.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-weight: bold;
+    font-family: Helvetica;
+    background-color: var(--bg-color);
+    color: var(--font-color-main);
+    overflow-x: hidden;
+     
+}
+h1,
+h2,
+h3,
+h4,
+
+
+p {
+    color: var(--font-color-main);
+}
+span{
+    color: var(--font-color-main);
+}
+
+a{
+  
+    text-decoration: none;
+    &:visited{
+        color: var(--font-color-main);
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.activated{
+    color: cadetblue !important;
+}
+.fa-user, .fa-users, .fa-cart-shopping, .fa-magnifying-glass{
+    color: #222E3A;
+}

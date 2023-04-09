@@ -1,0 +1,87 @@
+
+.card-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+    padding-top: 30px;
+    padding-bottom: 55px;
+
+    &__img{
+        width: 500px;   
+        height: 800px;  
+        box-shadow: 0.5em 0.3em 0.7em #00000035;
+        object-fit: cover;        
+    }
+}
+
+.card-detail__content{
+    width: 30%;
+   
+    &__name{
+        font-size: 40px;
+        margin: 0px;
+        padding-bottom:30px;
+        text-transform: uppercase;
+         
+    }
+    &__price{
+        font-size: 30px;
+        font-weight: lighter;
+        width: 100%;
+        margin: 0px;
+        padding-bottom:30px;
+
+    }
+    &__description{
+        font-weight: lighter; 
+        line-height: 26px;
+        font-size: 19px;
+        margin: 0px;
+    }
+    &__category {
+        display: none;
+    }
+
+    &__type, &__author, &__pages, &__editorial, &__languague, &__bookbinding, &__year, &__isbn, &__size, &__color, &__stock {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .card-detail{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 50px;
+        padding-top: 1px;
+        padding-bottom: 55px;
+    
+        &__img{
+            width: 383px;   
+            height: 550px;  
+            box-shadow: 0.5em 0.3em 0.7em #00000035;
+            object-fit: cover;        
+        }
+    }
+
+    .card-detail__content{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        &__name{
+            font-size: 23px;
+            width: 360px;
+        }
+        &__description{
+            width: 70%;
+            padding-bottom: 15px;
+        }
+
+       
+    
+    }
+}

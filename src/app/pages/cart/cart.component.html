@@ -1,0 +1,41 @@
+<div
+    class="product__wrapper"
+>
+    <article
+    *ngFor="let product of myCart$ | async"
+    class="productCart"
+    >
+        <div class="productCart__body">
+            <p>{{ product.name }}</p>
+            <div class="productCart__body-info">
+                <p>{{ product.price }} €</p>
+                <p>{{ product.stock }}</p>
+            </div>
+        </div>
+    
+    <div class="productCart__total">
+        <p>{{ totalProduct(product.price, product.stock).toFixed(2) }}</p>
+    </div>
+    <div class="productCart__buttons">
+        <div class="productCart__buttons-operators">
+            <span 
+            (click)="updateUnits('minus', product._id)"
+            class="fa-solid fa-minus"></span>
+            <span class="spanNumber">{{ product.stock }}</span>
+            <span 
+            (click)="updateUnits('add', product._id)"
+            class="fa-solid fa-plus"></span>
+        </div>
+        <span
+        (click)="deleteProduct(product._id)" 
+        class="fa-solid fa-trash"></span>
+    </div>
+    </article>
+    <div class="cartTotal">
+        <p class="cartTotal__total">Total : {{ totalCart() }} €</p>
+    </div>
+    <button
+    (click)="goToDetail()"
+    class="cart-btn"
+    >Ir a mi cesta</button>
+</div>
